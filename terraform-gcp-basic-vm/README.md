@@ -1,85 +1,83 @@
-# 🌩️ Projeto: Infraestrutura Básica no GCP com Terraform
+# 🌩️ Project: Basic Infrastructure on GCP with Terraform
 
-Este projeto cria uma infraestrutura simples porém completa na Google Cloud Platform usando Terraform, como parte do meu portfólio de Cloud Engineer com foco em arquitetura de soluções.
-
-> ⚠️ **Aviso**: Este projeto foi desenvolvido com o auxílio do ChatGPT para acelerar o aprendizado, automatizar explicações e revisar conceitos técnicos. Todo o código e estrutura foram compreendidos e adaptados para fins educacionais e profissionais.
+This project sets up a simple yet complete infrastructure on Google Cloud Platform using Terraform. It is part of my Cloud Engineer portfolio, with a focus on cloud architecture automation and best practices.
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objective
 
-Criar, via infraestrutura como código:
+Provision the following resources using Infrastructure as Code:
 
-- Uma rede VPC customizada
-- Uma sub-rede privada
-- Uma máquina virtual Linux (f1-micro) com NGINX instalado automaticamente
-- Regras de firewall permitindo acesso HTTP (porta 80) e SSH (porta 22)
+- A custom VPC network
+- A private subnetwork
+- A Linux virtual machine (f1-micro) with NGINX installed automatically
+- Firewall rules allowing HTTP (port 80) and SSH (port 22)
 
 ---
 
-## 🧰 Tecnologias e Ferramentas Utilizadas
+## 🧰 Tools and Technologies Used
 
 - [Google Cloud Platform (GCP)](https://cloud.google.com/)
 - [Terraform](https://www.terraform.io/)
-- Cloud Shell (sem necessidade de instalação local)
-- Debian 11 (imagem da VM)
-- NGINX (servidor web)
+- Cloud Shell (no local installation required)
+- Debian 11 (VM image)
+- NGINX (web server)
 
 ---
 
-## 🗂️ Estrutura dos Arquivos
+## 📂 File Structure
 
 ```
 .
-├── main.tf         # Define os recursos GCP
-├── variables.tf    # Variáveis reutilizáveis (project_id, região, zona)
-├── outputs.tf      # Mostra o IP público da VM após deploy
-└── README.md       # Este documento
+├── main.tf         # Defines GCP resources
+├── variables.tf    # Reusable variables (project_id, region, zone)
+├── outputs.tf      # Displays the public IP after deployment
+└── README.md       # This documentation
 ```
 
 ---
 
-## ▶️ Como Executar
+## ▶️ How to Deploy
 
-> 💡 Recomendado usar o **Google Cloud Shell** para evitar instalações locais.
+> 💡 Recommended: Use **Google Cloud Shell** to avoid local setup.
 
-### 1. Clonar ou criar o diretório:
+### 1. Create and enter a working directory:
 
 ```bash
 mkdir gcp-terraform-vpc-vm && cd gcp-terraform-vpc-vm
 ```
 
-### 2. Criar os arquivos `.tf` (veja estrutura acima)
+### 2. Create the `.tf` files (see structure above)
 
-### 3. Inicializar o Terraform
+### 3. Initialize Terraform
 
 ```bash
 terraform init
 ```
 
-### 4. Executar a infraestrutura (substitua pelo seu project_id)
+### 4. Apply the infrastructure (replace with your project_id)
 
 ```bash
 terraform apply -var="project_id=skilled-flight-348103"
 ```
 
-Digite `yes` para confirmar.
+Type `yes` to confirm.
 
 ---
 
-## 🌐 Acessar a aplicação
+## 🌐 Access the Application
 
-Após o deploy, o terminal mostrará o **IP público da VM**. Acesse pelo navegador:
+After deployment, the terminal will display the **public IP of the VM**. Open it in your browser:
 
 ```
-http://SEU-IP-PUBLICO
+http://YOUR-PUBLIC-IP
 ```
 
-Você verá a tela padrão do NGINX 🎉
+You should see the default NGINX welcome page 🎉
 
 ---
 
-## 🧹 Como destruir tudo depois
+## 🦜 How to Destroy Everything
 
 ```bash
 terraform destroy -var="project_id=skilled-flight-348103"
@@ -87,28 +85,26 @@ terraform destroy -var="project_id=skilled-flight-348103"
 
 ---
 
-## 🔍 Visualizar recursos no GCP
+## 🔍 View Resources in the GCP Console
 
-- [Compute Engine – Instâncias de VM](https://console.cloud.google.com/compute/instances)
-- [VPC – Redes](https://console.cloud.google.com/networking/networks/list)
-- [Sub-redes](https://console.cloud.google.com/networking/subnetworks)
-- [Regras de firewall](https://console.cloud.google.com/networking/firewalls/list)
-
----
-
-## 📚 Aprendizados
-
-- Como declarar e usar variáveis no Terraform
-- Diferença entre VPC automática e customizada
-- Como aplicar tags e regras de firewall em instâncias
-- Como usar `metadata_startup_script` para automação
-- Gerenciamento de recursos pelo GCP Console e `gcloud CLI`
+- [Compute Engine – VM Instances](https://console.cloud.google.com/compute/instances)
+- [VPC – Networks](https://console.cloud.google.com/networking/networks/list)
+- [Subnets](https://console.cloud.google.com/networking/subnetworks)
+- [Firewall Rules](https://console.cloud.google.com/networking/firewalls/list)
 
 ---
 
-## 👨‍💻 Autor
+## 📖 Key Learnings
 
-**Filipe Silva Lyrio** 
-🧠 Data Scientist | 🤖 AI Developer | 📊 Machine Learning Engineer | 📚 LLM Engineer
+- How to declare and use variables in Terraform
+- Difference between automatic and custom VPCs
+- Applying firewall rules and startup scripts
+- Managing cloud resources via GCP Console and `gcloud` CLI
 
+---
+
+## 👨‍💼 Author
+
+**Filipe Lyrio**  
+🧠 Data Scientist | 🤖 AI Developer | 📊 ML Engineer | 📚 LLM Engineer  
 [LinkedIn](https://www.linkedin.com/in/filipelyrio)
