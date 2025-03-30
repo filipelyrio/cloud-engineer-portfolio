@@ -31,14 +31,6 @@ Each project contains:
 
 ---
 
-## 👨‍💻 About Me
-
-**Filipe Lyrio**  
-🧠 Data Scientist | 🤖 AI Developer | 📊 Machine Learning Engineer | 📚 LLM Engineer  
-[LinkedIn](https://www.linkedin.com/in/filipelyrio)
-
----
-
 ## 🚧 Coming Soon
 
 New projects to be added focusing on:
@@ -46,3 +38,15 @@ New projects to be added focusing on:
 - Monitoring with Cloud Monitoring
 - Backup & Recovery
 - Security with IAM and VPC Service Controls
+
+---
+
+## 👨‍💻 About Me
+
+**Filipe Lyrio**  
+🧠 Data Scientist | 🤖 AI Developer | 📊 Machine Learning Engineer | 📚 LLM Engineer  
+[LinkedIn](https://www.linkedin.com/in/filipelyrio)
+
+
+
+
