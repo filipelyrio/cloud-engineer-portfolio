@@ -110,4 +110,5 @@ terraform destroy -var="project_id=skilled-flight-348103"
 
 **Filipe Silva Lyrio** 
 🧠 Data Scientist | 🤖 AI Developer | 📊 Machine Learning Engineer | 📚 LLM Engineer
+
 [LinkedIn](https://www.linkedin.com/in/filipelyrio)
